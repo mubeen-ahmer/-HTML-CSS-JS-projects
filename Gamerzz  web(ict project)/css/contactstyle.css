@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style-type: none;
+}
+html,
+body {
+  font-size: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff7b00;
+  /* color: white; */
+}
+header #logo {
+  text-align: center;
+  font-size: 3rem;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Chango", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: default;
+}
+header .option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+header .option a {
+  position: relative;
+  font-size: 2rem;
+  /* box-sizing: none; */
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Rubik Bubbles";
+  padding: 0 5px 15px;
+}
+header .option a:hover {
+  background: linear-gradient(90deg, #af002d 50%, #770c6c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .option a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #770c6c;
+  transition: width 0.3s ease-in-out;
+}
+header .option a:hover::after {
+  width: 100%;
+}
+
+.dropmenu {
+  display: none;
+}
+.dropmenu .button {
+  position: relative;
+}
+.dropmenu .button i {
+  background-color: #ff7b00;
+  cursor: pointer;
+  text-align: center;
+  font-size: 4rem;
+}
+.dropmenu .button .content {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  background-color: #575757;
+  min-width: 14rem;
+  border-radius: 5px;
+  z-index: 2;
+}
+.dropmenu .button .content .linker {
+  color: black;
+  padding: 1rem 1rem;
+  margin: 5px;
+  background-color: #ffffff;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+}
+
+main {
+  /* height: 100%; */
+  width: 100%;
+  display: flex;
+  flex: 1;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  font-family: "Rubik Bubbles", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+main .sec-1 {
+  width: 62.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 500px; */
+  /* background-color: aquamarine; */
+  margin: 40px 0px;
+  padding: 40px;
+  gap: 40px;
+  border-bottom: 2px solid black;
+  /* border: 2px solid rgb(179, 0, 0); */
+}
+main .sec {
+  margin: 40px 0px;
+  width: 62.5rem;
+  padding: 0 40px 40px;
+  border-bottom: 2px solid black;
+  /* border: 2px solid rgb(54, 0, 179); */
+}
+main .sec-1 .textbox {
+  text-align: left;
+  /* border: 2px solid rgb(0, 165, 27); */
+  padding: 5px;
+}
+main div p,
+main div h2 {
+  font-size: 1.6rem;
+  font-family: "Times New Roman", Times, serif;
+  margin: 20px;
+}
+
+.copyright {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  background-color: black;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 12px;
+  }
+  .dropmenu {
+    display: block;
+  }
+  .dropmenu .button .content {
+    display: none;
+  }
+  header .option {
+    display: none;
+  }
+  main .sec-1 {
+    flex-direction: column;
+    width: auto;
+  }
+  main .sec {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 330px) {
+  html {
+    font-size: 8px;
+  }
+  .dropmenu .button i {
+    font-size: 2rem;
+  }
+  header #logo {
+    font-size: 2rem;
+    padding: 0px;
+  }
+  main h1 {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+  main .sec-1 .textbox {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+  main div p,
+  main div h2 {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}

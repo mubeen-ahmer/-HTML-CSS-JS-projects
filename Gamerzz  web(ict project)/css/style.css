@@ -1,0 +1,512 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style-type: none;
+}
+html,
+body {
+  font-size: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff7b00;
+}
+header #logo {
+  text-align: center;
+  font-size: 3rem;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Chango", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: default;
+}
+header .option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+header .option a {
+  position: relative;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Rubik Bubbles";
+  padding: 0 5px 15px;
+}
+header .option a:hover {
+  background: linear-gradient(90deg, #af002d 50%, #770c6c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .option a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #770c6c;
+  transition: width 0.3s ease-in-out;
+}
+header .option a:hover::after {
+  width: 100%;
+}
+
+.dropmenu {
+  display: none;
+}
+.dropmenu .button {
+  position: relative;
+}
+.dropmenu .button i {
+  background-color: #ff7b00;
+  cursor: pointer;
+  text-align: center;
+  font-size: 4rem;
+}
+.dropmenu .button .content {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  background-color: #575757;
+  min-width: 14rem;
+  border-radius: 5px;
+  z-index: 2;
+}
+.dropmenu .button .content .linker {
+  color: black;
+  padding: 1rem 1rem;
+  margin: 5px;
+  background-color: #ffffff;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+}
+#main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(88, 88, 88, 0.6);
+  height: 100vh; 
+}
+#main div {
+  margin: 100px 0 100px 0;
+  width: 500px;
+  height: 400px;
+}
+#main .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main .text p {
+  background: linear-gradient(90deg, #ffa600, #af002d 70%, #770c6c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.5rem;
+  font-family: "Rubik Bubbles", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#main .image {
+  background: url(../images/main-img.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+#mainForResponsive {
+  display: none;
+  flex: 1;
+  width: 100%;
+  border-bottom: 0.5px solid rgba(88, 88, 88, 0.6);
+}
+
+#mainForResponsive .content {
+  position: relative;
+  width: 31rem;
+  height: 25rem;
+  margin-top: 8rem;
+  margin-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainForResponsive .text {
+  position: absolute;
+  z-index: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#mainForResponsive .text p {
+  background: linear-gradient(90deg, #ffa600, #af002d 70%, #770c6c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.5rem;
+  font-family: "Rubik Bubbles", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+#mainForResponsive .image {
+  width: 100%; 
+  height: 100%; 
+  background: url(../images/main-img.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px;
+}
+
+.product h1 {
+  text-align: center;
+  font-size: 4.3rem;
+  font-family: "Rubik Bubbles", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 40px;
+}
+.product .productAnimation {
+  width: 600px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.product .productAnimation .img {
+  position: relative;
+  background: url(../images/img-1.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid rgb(144, 94, 0);
+  transition: all ease-in-out 0.5s;
+}
+#img5 {
+  background-image: url(../images/img-2.jpeg);
+}
+#img4 {
+  background-image: url(../images/WhatsApp\ Image\ 2024-11-07\ at\ 12.13.40\ AM.jpeg);
+}
+#img3 {
+  background-image: url(../images/img7.png);
+}
+#img2 {
+  background-image: url(../images/img8.png);
+}
+.product .productAnimation .img:hover {
+  width: 100%;
+}
+
+/* -----------------------------------------------animation that comes out from buttom */
+
+.product .productAnimation .img::after {
+  content: "90,000+ Sales";
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 133, 15, 0.8) 50%,
+    rgba(227, 97, 10, 0.8)
+  );
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: transform 0.8s ease;
+}
+#img5::after {
+  content: "15,000+ Sales";
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+     rgba(8, 111, 245, 0.8) 50%,
+    rgba(42, 14, 224, 0.8)
+  );
+}
+#img4::after {
+  content: "30,000+ Sales";
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    /* rgba(255, 166, 0, 0.5), */ rgba(231, 234, 239, 0.8) 50%,
+    rgba(255, 11, 11, 0.8)
+  );
+}
+#img3::after {
+  content: "50,000+ Sales";
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    /* rgba(255, 166, 0, 0.5), */ rgba(244, 9, 9, 0.8) 50%,
+    rgba(11, 11, 11, 0.8)
+  );
+}
+#img2::after {
+  content: "35,000+ Sales";
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    /* rgba(255, 166, 0, 0.5), */ rgba(246, 243, 243, 0.8) 50%,
+    rgba(238, 234, 234, 0.8)
+  );
+}
+.product .productAnimation .img:hover::after {
+  transform: translate(-50%, 0%);
+}
+/*----------------------------------------------- simple product view displayable at max width 450px  */
+.product .simple {
+  display: none;
+}
+.product .simple {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+  padding: 2px;
+}
+.product .simple .box1,
+.product .simple .box2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  gap: 10px;
+}
+.product .simple .img1 {
+  background: url(../images/astrobot.png);
+}
+.product .simple .img2 {
+  background: url(../images/doom.png);
+}
+.product .simple .img3 {
+  background: url(../images/grounded.jpg);
+}
+.product .simple .img4 {
+  background: url(../images/Halo.png);
+}
+.product .simple .box1 .img,
+.product .simple .box2 .img {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-repeat: no-repeat;
+}
+
+.product .simple .img::after {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: transform 0.8s ease;
+}
+.product .simple .img1::after {
+  content: "40,000+ Sales";
+  background: linear-gradient(
+    90deg,
+    rgba(10, 196, 248, 0.8) 50%,
+    rgba(72, 30, 176, 0.8)
+  );
+}
+.product .simple .img2::after {
+  content: "26,000+ Sales";
+  background: linear-gradient(
+    90deg,
+    rgba(159, 94, 23, 0.8) 50%,
+    rgba(255, 48, 48, 0.8)
+  );
+}
+.product .simple .img3::after {
+  content: "90,000+ Sales";
+  background: linear-gradient(
+    90deg,
+    rgba(237, 75, 242, 0.8) 50%,
+    rgba(64, 48, 103, 0.8)
+  );
+}
+.product .simple .img4::after {
+  content: "33,000+ Sales";
+  background: linear-gradient(
+    90deg,
+    rgb(108, 78, 78) 50%,
+    rgba(134, 115, 185, 0.8)
+  );
+}
+.product .simple .box1 .img.animation::after,
+.product .simple .box2 .img.animation::after {
+  transform: translate(-50%, 0%);
+}
+
+footer {
+  width: 100%;
+  background-color: #ff7b00;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+footer i {
+  font-size: 1.5rem;
+}
+footer p {
+  font-size: 1.5rem;
+}
+.copyright {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: black;
+}
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 11px;
+  }
+  #main div {
+    margin: 70px 0 70px 0;
+    width: 300px;
+    height: 400px;
+  }
+  .product .productAnimation {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 14px;
+  }
+  .dropmenu {
+    display: block;
+  }
+  .dropmenu .button .content {
+    display: none; 
+  }
+  header .option {
+    display: none;
+  }
+  #main {
+    display: none;
+  }
+  #mainForResponsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product .productAnimation {
+    width: 400px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer p {
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 10px;
+  }
+
+  #mainForResponsive .content {
+    width: 300px;
+    height: 500px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  #mainForResponsive .text p {
+    font-size: 3.5rem;
+  }
+  .product .simple {
+    display: flex;
+  }
+
+  .product .productAnimation {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  html {
+    font-size: 8px;
+  }
+  header #logo {
+    font-size: 2rem;
+    padding: 0px;
+  }
+  .dropmenu .button i {
+    font-size: 2rem;
+  }
+  #mainForResponsive .content {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
