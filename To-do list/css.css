@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(45deg, rgb(17, 17, 170), purple 90%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding-top: 5rem;
+  align-items: start;
+  justify-content: center;
+}
+.container {
+  border-radius: 20px;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+h1 {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 30px;
+}
+.inputBox {
+  display: flex;
+  margin: 30px;
+  border: 2px solid black;
+  border-radius: 100px;
+}
+.inputBox input {
+  width: 360px;
+  height: 50px;
+  font-size: 15px;
+  padding: 15px;
+  border: none;
+  border-radius: 100px 0 0 100px;
+}
+.inputBox input:focus,
+button:focus {
+  outline: none;
+}
+.inputBox button {
+  border: none;
+  border-radius: 100px;
+  height: 50px;
+  width: 120px;
+  background-color: rgb(226, 109, 226);
+}
+ul {
+  margin: 0 10px 30px 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #333;
+}
+ul::-webkit-scrollbar,
+li p::-webkit-scrollbar {
+  width: 8px; /* Set the width of the vertical scrollbar */
+  height: 5px; /* Set the width of the horizontal scrollbar */
+}
+
+ul::-webkit-scrollbar-thumb,
+li p::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-track,
+li p::-webkit-scrollbar-track {
+  background-color: #333;
+  border-radius: 10px;
+}
+li {
+  width: 480px;
+  height: fit-content;
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+  border-bottom: 0.1px solid rgb(95, 95, 95);
+  margin: 20px 0;
+  /* border-radius: 100px; */
+}
+li p {
+  width: 400px;
+  height: auto;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  font-size: 18px;
+  /* display: flex;
+  align-items: center; */
+  /* border-radius: 10px 0 0 10px; */
+  /* padding: 5px 0px 5px 15px; */
+}
+
+li button {
+  height: 35px;
+  width: 35px;
+  background-color: rgb(220, 193, 193);
+  border-radius: 100%;
+  border: none;
+}
+.a {
+  background-color: #4caf50;
+  width: 250px;
+  height: 70px;
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 20px; */
+  transform: translateY(100%);
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.notification2{
+    left: 20px;
+}
+.notification.show {
+  animation: show 3s ease-out;
+  /* display: block; */
+}
+.notification2.show {
+  animation: show 3s ease-out;
+  /* display: block; */
+}
+@keyframes show {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  30%,
+  90% {
+    transform: translateY(-20%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
